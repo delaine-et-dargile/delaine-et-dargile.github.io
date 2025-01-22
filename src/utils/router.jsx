@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom'
+import { createHashRouter, Navigate } from 'react-router-dom'
 import App from '../App.jsx'
 import Pottery from '../components/Pottery.jsx'
 import Contact from '../components/Contact.jsx'
@@ -31,7 +31,7 @@ const Layout = () => (
 )
 
 // Define Routes
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <App />,
@@ -71,6 +71,5 @@ const router = createBrowserRouter([
     element: <Navigate to="/" replace />,
   },
 ])
-
 
 export default router
