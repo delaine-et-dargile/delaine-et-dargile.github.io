@@ -5,8 +5,8 @@ import fr from './i18n/fr'
 
 i18n.use(initReactI18next).init({
   resources: {
-    en,
-    fr,
+    en: { translation: en.translation },
+    fr: { translation: fr.translation },
   },
   lng: 'fr',
   fallbackLng: 'en',

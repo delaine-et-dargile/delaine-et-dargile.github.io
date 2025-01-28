@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { useParams } from 'react-router-dom'
-import { productsByType } from '../config/products'
+import productsByTypeLocalized from '../config/products'
 import { HiOutlineArrowLeft } from 'react-icons/hi2'
 import { useNavigate } from 'react-router-dom'
+import i18n from '../../i18n'
+import { useMemo } from 'react'
 
 const ProductDetail = () => {
   const { id } = useParams()
@@ -12,6 +14,11 @@ const ProductDetail = () => {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [zoomStyle, setZoomStyle] = useState({})
   const [isZoomVisible, setIsZoomVisible] = useState(false)
+
+  const productsByType = useMemo(
+    () => productsByTypeLocalized(),
+    [i18n.language],
+  )
 
   const navigate = useNavigate()
 
@@ -111,7 +118,7 @@ const ProductDetail = () => {
             <img
               src={product.images[selectedIndex]}
               alt={product.name}
-              className="w-full h-auto max-h-[500px] object-contain rounded md:max-w-full"
+              className="w-full h-auto max-h-[500px] object-contain rounded md:max-w-full cursor-zoom-in"
             />
           </div>
         </div>

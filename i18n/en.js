@@ -38,6 +38,50 @@ const en = {
     aboutMeTitle: "Behind de laine et d'argile",
     aboutMeDescription:
       "Welcome to my world ! My name is Marie and I'm from France. I was first introduced to ceramics when I studied abroad in the US and fell in love with it. Crochet came a little bit later but makes my heart as warm and fuzzy as pottery does. Never creating the same piece twice, each creation is unique and handmade with care. Each collection is produced in small series at different periods of my life, evolving with my journey. I hope that my creations will bring a touch of authenticity and warmth to your daily life.",
+    products: {
+      tomatoHat: {
+        name: 'Fruit Hat',
+        price: '$25',
+        description:
+          'Materials: Acrylic yarn\nCan be made into various fruits: strawberry, blueberry, watermelon, kiwi ...',
+      },
+      coasters: {
+        name: 'Coasters',
+        price: '$20',
+        description:
+          'Set of 4 coasters. They can be folded into a bowl to create a flower bouquet visual\nMaterials: Acrylic yarn\nAvailable in different color combinations',
+      },
+      whiteFlower: {
+        name: 'Flower',
+        price: '$15',
+        description:
+          'Perfect to add a touch of color/originality to your bag or other personal items!\nMaterials: Acrylic yarn\nAvailable in different color combinations',
+      },
+      plant: {
+        name: 'Plants',
+        price: '$16 each, $30 for two',
+        description:
+          'They thrive on love alone, no need for water\nMaterials: Acrylic yarn\nOther types of plants can be made: cactus, vine leaves, trailing plants ...',
+      },
+      blackBowlSet: {
+        name: 'Black bowl',
+        price: '$45',
+        description: 'bowl desc',
+      },
+      donutPot: {
+        name: 'Donut pot',
+        price: '$45',
+        description: 'donut desc',
+      },
+    },
+
+    // Tabs / filter traduction
+    bowls: 'Bowls',
+    pots: 'Flower pots',
+    hat: 'Hats',
+    plant: 'Plants',
+    coasters: 'Coasters',
+    flower: 'Flowers',
   },
 }
 

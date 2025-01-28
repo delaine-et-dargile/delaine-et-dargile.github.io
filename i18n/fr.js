@@ -42,29 +42,47 @@ const fr = {
     products: {
       tomatoHat: {
         name: 'Chapeau fruit',
-        price: '25 euros',
+        price: '25€',
         description:
           'Matériaux : Laine acrylique\nPeut être décliné en différents fruits : fraise, myrtille, pastèque, kiwi ...',
       },
       coasters: {
         name: 'Sous-tasse',
-        price: '20 euros',
+        price: '20€',
         description:
           'Set de 4 sous-tasse. Sont pliables dans un bol pour donner un visuel bouquet de fleurs\nMatériaux : Laines acryliques\nDisponibles en différents combo de couleurs',
       },
       whiteFlower: {
         name: 'Fleur',
-        price: '15 euros',
+        price: '15€',
         description:
           "Parfaite pour ajouter une touche de couleur/d'originalité à votre sac ou autres effets personnels !\nMatériaux : Laines acryliques\nDisponible en différents combo de couleurs",
       },
       plant: {
         name: 'Plantes',
-        price: "16 euros l'unité, 30 les deux",
+        price: "16€ l'unité, 30€ les deux",
         description:
           "Elles ne vivent que d'amour, pas besoin d'eau fraîche\nMatériaux : Laines acrylique\nD'autres types de plantes peuvent être réalisées : cactus, feuilles de vignes, plantes tombantes ...",
       },
+      blackBowlSet: {
+        name: 'Bol',
+        price: '45€',
+        description: 'bowl desc',
+      },
+      donutPot: {
+        name: 'Vase donut',
+        price: '45€',
+        description: 'donut desc',
+      },
     },
+
+    // Tabs / filter traduction
+    bowls: 'Bols',
+    pots: 'Pots de fleurs',
+    hat: 'Chapeaux',
+    plant: 'Plantes',
+    coasters: 'Sous-verre',
+    flower: 'Fleurs',
   },
 }
 

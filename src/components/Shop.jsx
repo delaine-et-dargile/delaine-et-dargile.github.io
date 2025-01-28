@@ -1,24 +1,28 @@
 import React, { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { productsByType } from '../config/products'
+import productsByTypeLocalized from '../config/products'
 import Contact from './Contact'
+import { useTranslation } from 'react-i18next'
 
 const Shop = () => {
   const navigate = useNavigate()
+  const { t } = useTranslation()
+
   const defaultTypes = ['crochet', 'pottery']
+  const productsByType = productsByTypeLocalized()
 
   const [selectedType, setSelectedType] = useState(null)
   const [selectedCategory, setSelectedCategory] = useState(null)
   const [hoveredProduct, setHoveredProduct] = useState(null)
 
-  const types = [...Object.keys(productsByType), 'custom']
+  const types = [...Object.keys(productsByType), 'Custom']
   const categories =
     selectedType && productsByType[selectedType]
       ? Object.keys(productsByType[selectedType])
       : []
 
   const productsToDisplay = useMemo(() => {
-    if (selectedType === 'custom') {
+    if (selectedType === 'Custom') {
       return []
     }
 
@@ -51,13 +55,13 @@ const Shop = () => {
               selectedType === type ? 'underline underline-offset-2' : ''
             }`}
           >
-            {type.charAt(0).toUpperCase() + type.slice(1)}
+            {t(type.charAt(0) + type.slice(1))}
           </button>
         ))}
       </div>
 
       {/* Category Filter */}
-      {selectedType !== 'custom' && categories.length > 0 && (
+      {selectedType !== 'Custom' && categories.length > 0 && (
         <div className="flex space-x-4 mb-8">
           {categories.map((category) => (
             <button
@@ -73,17 +77,17 @@ const Shop = () => {
                   : ''
               }`}
             >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
+              {t(category.charAt(0) + category.slice(1))}
             </button>
           ))}
         </div>
       )}
 
       {/* Custom Tab Message */}
-      {selectedType === 'custom' && <Contact />}
+      {selectedType === 'Custom' && <Contact />}
 
       {/* Products Grid */}
-      {selectedType !== 'custom' && (
+      {selectedType !== 'Custom' && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {productsToDisplay.map((product) => (
             <div
